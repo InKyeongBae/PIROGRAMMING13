@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook - 로그인 또는 가입</title>
+    <style>
+    *{
+        margin: 0 auto;
+        padding: 0;
+    }
+    a{
+        text-decoration:none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    .upper{
+        height: 100px;
+        width:100%;
+        background: #4365ad; /* Old browsers */
+        background: -moz-linear-gradient(top,  #4365ad 0%, #3c5a96 47%, #3b5998 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #4365ad 0%,#3c5a96 47%,#3b5998 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #4365ad 0%,#3c5a96 47%,#3b5998 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4365ad', endColorstr='#3b5998',GradientType=0 );
+        overflow:hidden;
+        margin:0 auto;
+    }
+    .facebook {
+        width:700px;
+        float :left;
+        color:#ffffff;
+        font-size:2.9em;
+        font-weight: 900;
+        line-height:100px;
+        margin-left : 230px;
+    }
+    .email{
+
+        float :left;
+        color:#ffffff;
+        font-size:0.8em;
+        margin-top: 25px;
+        height:100px;
+        margin-right : 25px;
+    }
+    .email div:nth-child(1){
+        margin : 3px;
+    }
+    .password{
+        float:left;
+        color:#ffffff;
+        font-size:0.8em;
+        margin-top: 25px;
+        height:100px;
+        margin-right : 25px;
+    }
+    .password div:nth-child(1){
+        margin : 3px;
+    }
+    .password div:nth-child(3){
+        margin : 3px;
+    }
+    .password a{
+        color:lightgray;
+    }
+    .login{
+        float:left;
+        margin-top: 40px;
+        color:#ffffff;
+        margin-right : 100px;
+    }
+    .login input[type=submit] {
+        background-color: #3b6998;
+        color: white;
+        border: 1px solid darkblue;
+        padding:5px;
+    }
+    .center{
+        display :block;
+        height: 700px;
+        width:100%;
+        overflow:hidden;
+        margin:0; padding: 0;
+        background: #f4f6f9;
+        background: -moz-linear-gradient(top,  #f4f6f9 0%, #b4b9c4 75%, #b4b9c4 75%, #b4b9c4 75%, #6d82a5 100%);
+        background: -webkit-linear-gradient(top,  #f4f6f9 0%,#b4b9c4 75%,#b4b9c4 75%,#b4b9c4 75%,#6d82a5 100%);
+        background: linear-gradient(to bottom,  #f4f6f9 0%,#b4b9c4 75%,#b4b9c4 75%,#b4b9c4 75%,#6d82a5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f6f9', endColorstr='#6d82a5',GradientType=0 );
+
+    }
+    .left{
+        float:left;
+        height:700px;
+        width:900px;
+        margin:0 auto;
+    }
+    .left div{
+        margin: 50px 50px 10px 200px;
+        color:navy;
+        font-size:1.3em;
+        font-weight: bold;
+    }
+    .left img{
+        display :block;
+        margin-left: 210px;
+        margin-right: 80px;
+    }
+    .right{
+        float:left;
+        height:700px;
+        width:40%;
+        margin:0 auto;
+        overflow:hidden;
+    }
+    .right div:nth-child(1){
+        color:black;
+        font-size:2.4em;
+        font-weight:bold;
+        margin: 25px 15px 5px 15px;
+    }
+    .right div:nth-child(2){
+        color:black;
+        font-size:1.2em;
+        margin: 5px 15px 5px 15px
+    }
+    .bir{
+        color:gray;
+        font-size:1.0em;
+        margin: 10px 15px 5px 15px;
+        font-weight:bold;
+    }
+    .gen{
+        color:gray;
+        font-size:1.0em;
+        margin: 5px 15px 5px 15px;
+        font-weight:bold;
+    }
+    .wrap{
+        overflow:hidden;
+    }
+    .right input[type=text]{
+        background-color: white;
+        color: gray;
+        width:400px;
+        font-size:1.2em;
+        border: 1px solid lightgray;
+        border-radius: 6px;
+        padding:10px;
+        margin: 5px 0 5px 0;
+    }
+    .right .smallinput input[type=text] {
+        width:185px;
+        margin: 5px 0px 5px 0px;
+    }
+
+    select {
+        padding:7px;
+        width:15%;
+        margin: 5px 1px 5px 1px;
+    }
+    .right input[type=radio]{
+        color: black;
+        font-size:2em;
+        margin: 5px 20px 5px 20px;
+    }
+    .cf{
+        color:dimgray;
+        font-size:1em;
+        margin: 5px 15px 5px 15px;
+    }
+    .cf a{
+        color:#3b5998;
+    }
+    .right input[type=submit] {
+        background: #c9de96;
+        background: -moz-linear-gradient(top,  #c9de96 0%, #8ab66b 44%, #398235 100%);
+        background: -webkit-linear-gradient(top,  #c9de96 0%,#8ab66b 44%,#398235 100%);
+        background: linear-gradient(to bottom,  #c9de96 0%,#8ab66b 44%,#398235 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=0 );
+        color: white;
+        border: 1px solid forestgreen;
+        padding: 5px 50px 5px 50px;
+        text-align:center;
+        font-size: 1.2em;
+        margin: 30px 17px 50px 17px;
+        border-radius: 5px;
+    }
+    .right .fin{
+        font-size:0.9em;
+        margin: 5px 15px 5px 15px;
+        color:dimgray;
+        font-weight:bold;
+    }
+    .right .fin a{
+        color:#3b5998;
+    }
+    .lower ul {
+        overflow:hidden;
+        margin:0 auto;
+        margin: 40px 0px 40px 200px;
+    }
+    ul li{
+        float:left; list-style:none; font-size:1.0em;
+        margin-left:5px;
+        color:dimgray;
+    }
+    li a{
+        color:#3b5998;
+    }
+    li input[type=button]{
+        padding: 3px 10px 3px 10px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="upper">
+        <div class="facebook">
+            <img src="logo.png" border="0" width="200" height="50"/>
+        </div>
+        <div class ="email">
+            <div> 이메일 또는 휴대폰 </div>
+            <div>
+                <input type="text" name="uid" /><br />
+            </div>
+        </div>
+        <div class ="password">
+             <div> 비밀번호 </div>
+             <div>
+                 <input type="password" name="upw" /><br />
+             </div>
+             <div><a href="" target="_blank">계정을 잊으셨나요?</a></div>
+        </div>
+        <div class="login">
+             <input type="submit" value="로그인" />
+        </div>
+    </div>
+
+    <div class="center">
+        <div class="left">
+            <div> Facebook에서 전세계에 있는 친구, 가족, 지인들과 <br/>
+            함께 이야기를 나눠보세요. </div>
+        <img src="facebook.png" border="0" width="500" height="220"/>
+        </div>
+        <div class="right">
+            <form action="#" method="get">
+                <div>가입하기</div>
+                <div>빠르고 쉽습니다.</div>
+                <div class="smallinput"><input type="text" name="newfname" value="성(姓)" />
+                <input type="text" name="newname" value="이름(성은 제외)" /></div><br />
+                <input type="text" name="newid" value="휴대폰 번호 또는 이메일" /><br />
+                <input type="text" name="newpw" value="새 비밀번호" /><br />
+        <div class="bir">생일</div>
+        <div class="wrap">
+            <select name="year">
+                <option>연도</option>
+                <option selected>2020</option><option>2019</option>
+                <option>2018</option><option>2017</option>
+                <option>2016</option><option>2015</option>
+                <option>2014</option><option>2013</option>
+                <option>2012</option><option>2011</option>
+                <option>2010</option><option>2009</option>
+                <option>2008</option><option>2007</option>
+                <option>2006</option><option>2005</option>
+                <option>2004</option><option>2003</option>
+                <option>2002</option><option>2001</option>
+                <option>2000</option><option>1999</option>
+                <option>1998</option><option>1997</option>
+                <option>1996</option><option>1995</option>
+                <option>1994</option><option>1993</option>
+                <option>1992</option><option>1991</option>
+                <option>1990</option><option>1989</option>
+            </select>
+            <select name="month">
+                <option>월</option>
+                <option>1월</option><option>2월</option>
+                <option>3월</option><option>4월</option>
+                <option>5월</option><option>6월</option>
+                <option selected>7월</option><option>8월</option>
+                <option>9월</option><option>10월</option>
+                <option>11월</option><option>12월</option>
+            </select>
+            <select name="day">
+                <option>일</option>
+                <option>1</option><option>2</option>
+                <option>3</option><option>4</option>
+                <option>5</option><option>6</option>
+                <option selected>7</option><option>8</option>
+                <option>9</option><option>10</option>
+                <option>11</option><option>12</option>
+                <option>13</option><option>14</option>
+                <option>15</option><option>16</option>
+                <option>17</option><option>18</option>
+                <option>19</option><option>20</option>
+                <option>21</option><option>22</option>
+                <option>23</option><option>24</option>
+                <option>25</option><option>26</option>
+                <option>27</option><option>28</option>
+                <option>29</option><option>30</option>
+                <option>31</option>
+            </select><br/>
+            </div>
+            <div class="gen">성별</div>
+                <input type="radio" name="gender" value="m">여성
+                <input type="radio" name="gender" value="w">남성
+                <input type="radio" name="gender" value="D">직접 지정<br />
+            <div class="cf">
+            가입하기 버튼을 클릭하면 Facebook의 <a href="" target="_blank">약관, 데이터 정책</a> <br/>
+            및 <a href="" target="_blank">쿠키 정책</a>에 동의하게 됩니다. Facebook으로부터 SMS <br/>
+            알림을 받을 수 있으며 알림은 언제든지 옵트 아웃할 수 있 <br/>
+            습니다.
+            </div>
+            <div><input type="submit" value="가입하기" /></div>
+            <div class="fin">유명인, 밴드, 비즈니스를 위한 <a href="" target="_blank">페이지 만들기</a></div>
+            </form>
+        </div>
+    </div>
+    <div class="lower">
+        <ul>
+            <li>한국어</li>
+            <li><a href="#" alt="">English (US) </a></li>
+            <li><a href="#" alt="">Tiếng Việt</a></li>
+            <li><a href="#" alt="">Bahasa Indonesia</a></li>
+            <li><a href="#" alt="">ภาษาไทย</a></li>
+            <li><a href="#" alt="">Español</a></li>
+            <li><a href="#" alt="">中文(简体)</a></li>
+            <li><a href="#" alt="">日本語</a></li>
+            <li><a href="#" alt="">Português (Brasil)</a></li>
+            <li><a href="#" alt="">Français (France)</a></li>
+            <li><a href="#" alt="">Deutsch</a></li>
+            <li><input type="button" name="btn" value="+"></li>
+        </ul>
+    </div>
+</body>
+</html>
